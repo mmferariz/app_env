@@ -44,9 +44,9 @@ It's over.. that's it.
 ### Options
 By adding the flag *'--environment value'* (*'-e value'* abbreviated) you can define the  `.env` file with the configuration you want to use to generate the files with the new variables for native. For example: 
 
-'''yml
+```yml
 dart run app_env -e dev.env
-'''
+```
 
 *This should generate:*
 
@@ -74,9 +74,10 @@ Thus, you can use the variables in the strings.xml file in everything related to
 #### CustomBuildConfig.java
 For android only, you can indicate the package of your project using the flag *'-- package value'* (*'-p value'* abbreviated) and this will generate the file `CustomBuildConfig.java` (instead of the `strings.xml`) with the variables defined in your `.env` file. For example: 
 
-'''yml
+```yml
 dart run app_env -e dev.env -p com.app_env.example
-'''
+```
+
 *This should generate:*
 
 ![](assets/example_package.png)
