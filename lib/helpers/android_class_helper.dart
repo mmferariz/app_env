@@ -7,7 +7,7 @@ class AndroidClassHandler {
   late String _package;
 
   String get classBaseFileContent => '''package $_package;\n
-  public final class BuildConfig {
+  public final class CustomBuildConfig {
 
 }''';
 

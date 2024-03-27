@@ -40,6 +40,21 @@ And when you open the file, you will find a group of variables present as an ill
 4- Use the above command to run the package again.
 
 It's over.. that's it.
+
+### Options
+By adding the flag *'--environment value'* (*'-e value'* abbreviated) you can define the  `.env` file with the configuration you want to use to generate the files with the new variables for native. For example: 
+
+'''yml
+dart run app_env -e dev.env
+'''
+
+*This should generate:*
+
+![](assets/example_environment_android.png)
+
+
+![](assets/example_environment_ios.png)
+
 ### _Flutter Usage_
 At the present time, the package does not provide the ability to read the `.env` file, but there are many ways to read the file, either through
 
@@ -55,6 +70,19 @@ And every time you add a new variable or modify an existing file and run the pac
 ![](https://www8.0zz0.com/2023/07/13/22/115791653.png)
 
 Thus, you can use the variables in the strings.xml file in everything related to Android, whether it is an xml file, as well as java or Kotlin files.
+
+#### CustomBuildConfig.java
+For android only, you can indicate the package of your project using the flag *'-- package value'* (*'-p value'* abbreviated) and this will generate the file `CustomBuildConfig.java` (instead of the `strings.xml`) with the variables defined in your `.env` file. For example: 
+
+'''yml
+dart run app_env -e dev.env -p com.app_env.example
+'''
+*This should generate:*
+
+![](assets/example_package.png)
+
+![](assets/example_build_config.png)
+
 ### _iOS Usage_
 After executing the previous steps, go to the following path `ios/Flutter/` You will notice that there is a AppEnvConfig.xcconfig file.
 

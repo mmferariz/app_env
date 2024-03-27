@@ -25,7 +25,7 @@ class AppEnv {
       String _stringClass = _baseStringClass;
       List<String> paths = package!.split(".");
       paths.forEach((e) => _stringClass = "$_stringClass/$e");
-      _stringClass = "$_stringClass/BuildConfig.java";
+      _stringClass = "$_stringClass/CustomBuildConfig.java";
       logger.stdout("Java path: $_stringClass");
       await AndroidClassHandler(_stringClass, package).init(data: data);
     }
